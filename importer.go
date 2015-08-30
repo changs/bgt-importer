@@ -18,9 +18,7 @@ func checkErr(err error) {
 
 func main() {
 	inputFile, err := os.Open(os.Args[1])
-	if err != nil {
-		log.Fatal("Error opening input file:", err)
-	}
+	checkErr(err)
 
 	defer inputFile.Close()
 
